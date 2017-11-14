@@ -25,7 +25,7 @@ describe('SmtpHandler', function () {
         // restore original functionality
         nodemailer.createTransport.restore();
     });
-    
+
     it('can call createTransport', function () {
         const dummyServer = {};
         const dummyOptions = {};
@@ -71,7 +71,6 @@ describe('SmtpHandler', function () {
         const dummyOptions = {
             helpers: {
                 noreply: '"Mr. Foobar" foo@bar.baz'
-                }
             }
         };
         const transomSmtp = new SmtpHandler(dummyServer, dummyOptions);
@@ -84,5 +83,5 @@ describe('SmtpHandler', function () {
         expect(callback.calledOnce).to.be.true;
         expect(callback.calledWith(null, 'My-response'));
     });
-    
+
 });
