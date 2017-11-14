@@ -9,7 +9,6 @@ describe('SmtpHandler', function () {
     beforeEach(function () {
         // Stub out a mock nodemailer
         sinon.stub(nodemailer, 'createTransport').callsFake(function (opts) {
-            // whatever you would like innerLib.toCrazyCrap to do under test
             function Transport() {
                 this.sendMail = function (opts, cb) {
                     if (cb) {
@@ -67,4 +66,25 @@ describe('SmtpHandler', function () {
         expect(callback.calledWith(null, 'My-response'));
     });
 
+    it('can create dynamic sendTo methods', function () {
+        const dummyServer = {};
+        const dummyOptions = {
+            helpers: {
+                noreply: {
+                    email: "foo@bar.baz",
+                    name: "Mr. FooBar"
+                }
+            }
+        };
+        const transomSmtp = new SmtpHandler(dummyServer, dummyOptions);
+
+        const callback = sinon.spy();
+        transomSmtp.sendToNoreply({
+            response: "My-response"
+        }, callback);
+        sinon.assert.calledOnce(nodemailer.createTransport);
+        expect(callback.calledOnce).to.be.true;
+        expect(callback.calledWith(null, 'My-response'));
+    });
+    
 });
