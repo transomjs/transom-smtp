@@ -70,9 +70,7 @@ describe('SmtpHandler', function () {
         const dummyServer = {};
         const dummyOptions = {
             helpers: {
-                noreply: {
-                    email: "foo@bar.baz",
-                    name: "Mr. FooBar"
+                noreply: '"Mr. Foobar" foo@bar.baz'
                 }
             }
         };
