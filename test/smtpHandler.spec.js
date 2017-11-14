@@ -79,7 +79,7 @@ describe('SmtpHandler', function () {
         const transomSmtp = new SmtpHandler(dummyServer, dummyOptions);
 
         const callback = sinon.spy();
-        transomSmtp.sendToNoreply({
+        transomSmtp.sendFromNoreply({
             response: "My-response"
         }, callback);
         sinon.assert.calledOnce(nodemailer.createTransport);
