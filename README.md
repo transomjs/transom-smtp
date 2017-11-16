@@ -7,7 +7,7 @@ Add simple to use SMTP messaging functions to your server-side Transomjs code.
 ## Installation
 
 ```bash
-$ npm install transom-smtp
+$ npm install --save @transomjs/transom-smtp
 ```
 
 ## Usage
