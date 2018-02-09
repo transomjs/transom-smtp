@@ -44,6 +44,8 @@ NOTE: a sendFromNoreply() method is required when using transomSmtp with the tra
     };
     transom.configure(transomSmtp, options);
 
-    transom.initialize(server, myApi);
+    transom.initialize(server, myApi).then(function(server){
+    	...
+    });
 
 ```
