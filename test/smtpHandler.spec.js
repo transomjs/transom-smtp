@@ -1,10 +1,15 @@
 "use strict";
-const expect = require('chai').expect;
 const sinon = require('sinon');
 const SmtpHandler = require('../lib/smtpHandler');
 const nodemailer = require('nodemailer');
 
 describe('SmtpHandler', function () {
+    let expect;
+
+    before(function () {
+        // Use a dynamic import for the chai ES module!
+        return import("chai").then((chai) => (expect = chai.expect));
+    });
 
     beforeEach(function () {
         // Stub out a mock nodemailer
