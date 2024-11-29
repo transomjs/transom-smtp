@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/transomjs/transom-smtp#readme",
   "engines": {
-    "node": ">= 18"
+    "node": ">= 16"
   },
   "devDependencies": {
     "chai": "^5.0.3",
@@ -37,6 +37,6 @@
     "sinon": "^17.0.1"
   },
   "dependencies": {
-    "nodemailer": "^6.9.8"
+    "nodemailer": "^6.9.16"
   }
 }
