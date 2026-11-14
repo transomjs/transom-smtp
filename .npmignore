@@ -7,4 +7,3 @@ docs
 .nyc_output
 *.tgz
 *~
-.travis.yml
