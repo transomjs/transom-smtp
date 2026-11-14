@@ -35,7 +35,7 @@
     "cross-env": "^7.0.3",
     "mocha": "^10.2.0",
     "np": "^12.1.1",
-    "pocket-registry": "^1.1.8",
+    "pocket-registry": "^3.0.0",
     "shelljs": "^0.8.5",
     "sinon": "^17.0.1",
     "typescript": "^7.0.2"
