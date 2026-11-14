@@ -1,6 +1,6 @@
 # @transomjs/transom-smtp change log
 
-## 6.0.0
+## 7.0.0
 - **Uses nodemailer 10** (was 6). nodemailer 6 has nine security advisories, including SMTP
   command injection, header injection and mail to an unintended domain; all are fixed in 10.
   Changes that can reach callers through the mailer:
