@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.24",
-    "nodemailer": "^6.9.16"
+    "nodemailer": "^6.10.1"
   },
   "types": "dist/index.d.ts",
   "files": [
